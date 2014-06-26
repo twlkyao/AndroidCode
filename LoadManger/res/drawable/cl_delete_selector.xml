@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- pressed. -->
+    <item android:drawable="@drawable/delete_icon_sel" android:state_pressed="true"/>
+    <!-- foucused. -->
+    <item android:drawable="@drawable/delete_icon_sel" android:state_focused="true"/>
+    <!-- normal. -->
+    <item android:drawable="@drawable/delete_icon"/>
+
+</selector>
