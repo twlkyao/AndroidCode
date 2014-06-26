@@ -102,6 +102,11 @@ class MyCursorAdapter extends CursorAdapter {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				// Intent.ACTION_CALL_PRIVILEGED 由于Intent中隐藏了，只能用字符串代替
+				/* alternative choice.
+				 * Uri uri = Uri.parse("tel:12580");
+				 * Intent it = new Intent(Intent.ACTION_DIAL,uri);
+				 * startActivity(it);
+				 */
 				Intent intent = new Intent(Intent.ACTION_CALL, Uri.fromParts(
 						"tel", (String) v.getTag(), null));
 				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -135,6 +140,12 @@ class MyCursorAdapter extends CursorAdapter {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				/**
+				 * alternative choice
+				 * Uri uri = Uri.parse("smsto:13410177756");
+				 * Intent it = newIntent(Intent.ACTION_SENDTO, uri);
+				 * startActivity(it);
+				 */
 				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.fromParts(
 						"smsto", (String) v.getTag(), null));
 				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
